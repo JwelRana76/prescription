@@ -25,6 +25,12 @@ class User extends Authenticatable
         'password',
     ];
 
+    public static $columns = [
+        ['name' => 'name', 'data' => 'name'],
+        ['name' => 'username', 'data' => 'username'],
+        ['name' => 'amount', 'data' => 'amount'],
+        ['name' => 'action', 'data' => 'action', 'orderable' => false, 'searchable' => false],
+    ];
     /**
      * The attributes that should be hidden for serialization.
      *

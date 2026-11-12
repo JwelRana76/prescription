@@ -79,6 +79,7 @@
                 <div id="collapsePages" class="collapse {{Request::is('setting*')?'show':''}}" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item {{Request::is('setting/user*')?'active':''}}" href="{{route('user.index')}}">User</a>
+                        <a class="collapse-item {{Request::is('setting/roles*')?'active':''}}" href="{{route('role.index')}}">Role</a>
                     </div>
                 </div>
             </li>

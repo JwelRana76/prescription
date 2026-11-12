@@ -19,8 +19,34 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/v/dt/dt-3.1.5/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap4.min.css">
 
+<!-- Buttons CSS -->
+<link rel="stylesheet"
+href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap4.min.css">
+
+<!-- FixedHeader CSS -->
+<link rel="stylesheet"
+href="https://cdn.datatables.net/fixedheader/3.4.0/css/fixedHeader.bootstrap4.min.css">
+
+<style>
+    .dataTables_wrapper .dataTables_filter {
+    text-align: right;
+}
+
+.dataTables_wrapper .dt-buttons {
+    text-align: center;
+}
+
+.dataTables_wrapper .dataTables_length {
+    text-align: left;
+}
+
+.dt-buttons .btn {
+    margin: 2px;
+}
+</style>
 </head>
 
 <body id="page-top">
@@ -46,7 +72,6 @@
                 <div class="container-fluid">
 
                     {{$slot}}
-                    
 
                 </div>
                 <!-- /.container-fluid -->
@@ -95,27 +120,38 @@
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
     <script src="/jquery/jquery.min.js"></script>
-    <script src="/jquery/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="/jquery/jquery.easing.min.js"></script>
+<script src="/jquery/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="/jquery/sb-admin-2.min.js"></script>
+<script src="/jquery/jquery.easing.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="/jquery/Chart.min.js"></script>
+<script src="/jquery/sb-admin-2.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="/jquery/chart-area-demo.js"></script>
-    <script src="/jquery/chart-pie-demo.js"></script>
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
 
-    
-    {{-- Datatable script  --}}
-    <script src="https://cdn.datatables.net/v/dt/dt-3.1.5/datatables.min.js" ></script>
+<script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap4.min.js"></script>
 
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+
+<script src="https://cdn.datatables.net/fixedheader/3.4.0/js/dataTables.fixedHeader.min.js"></script>
+        
+
+<script src="/jquery/yajradatatable.js"></script>
     @stack('js')
 
 </body>
