@@ -23,9 +23,10 @@ Route::middleware('auth')->group(function () {
     Route::group(['prefix' => 'setting/roles', 'as' => 'role.'], function () {
        Route::get('/', [RoleController::class, 'index'])->name('index'); 
        Route::post('/store', [RoleController::class, 'store'])->name('store');
-       Route::get('/edit', [RoleController::class, 'edit'])->name('edit');
-       Route::delete('/{id}', [RoleController::class, 'destroy'])
-    ->name('role.destroy');
+       Route::get('/edit/{id}', [RoleController::class, 'edit'])->name('edit');
+       Route::delete('/{id}', [RoleController::class, 'delete'])->name('delete');
+       Route::get('/permission/{id}', [RoleController::class, 'permission'])->name('permission');
+       Route::post('/permission/store', [RoleController::class, 'permissionStore'])->name('permission.store');
     });
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
