@@ -17,8 +17,9 @@ Route::middleware('auth')->group(function () {
 
     Route::group(['prefix' => 'setting/user', 'as' => 'user.'], function () {
        Route::get('/', [UserController::class, 'index'])->name('index'); 
-       Route::get('/data', [UserController::class, 'getData'])->name('data');
-       Route::get('/edit', [UserController::class, 'edit'])->name('edit');
+       Route::post('/store', [UserController::class, 'store'])->name('store');
+       Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
+       Route::delete('/{id}', [UserController::class, 'delete'])->name('delete');
     });
     Route::group(['prefix' => 'setting/roles', 'as' => 'role.'], function () {
        Route::get('/', [RoleController::class, 'index'])->name('index'); 

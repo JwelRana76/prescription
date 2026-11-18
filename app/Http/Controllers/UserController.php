@@ -17,18 +17,7 @@ class UserController extends Controller
             $data = $this->model::all();
 
             return DataTables::of($data)
-            ->addColumn('checkbox', function ($user) {
-
-                return '
-                    <label class="itd-checkbox">
-                        <input type="checkbox"
-                            class="row-checkbox custom-checkbox"
-                            value="'.$user->id.'">
-                        <span class="checkmark"></span>
-                    </label>
-                ';
-            })
-
+            ->addIndexColumn()
             ->editColumn('amount', function ($user) {
                 return (string) ($user->amount ?? 100);
             })

@@ -6,9 +6,9 @@
                     <h3>Create Role</h3>
                 </div>
                 <div class="card-body">
-                    <x-form action="{{route('role.store')}}" method="post" id="role_create">
-                        <x-input id="id" value="{{$role->id ?? null}}" type="hidden" />
-                        <x-input id="name" value="{{$role->name ?? null}}" required />
+                    <x-form action="{{route('user.store')}}" method="post" id="role_create">
+                        <x-input id="id" value="{{$user->id ?? null}}" type="hidden" />
+                        <x-input id="name" value="{{$user->name ?? null}}" required />
                         <x-button />
                     </x-form>
                 </div>

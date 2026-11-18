@@ -38,7 +38,7 @@ class RoleController extends Controller
                         ' . csrf_field() . '
                         ' . method_field('DELETE') . '
                         <button type="submit" class="btn btn-sm btn-danger"
-                            onclick="return confirm(\'Are you sure you want to delete this role?\')">
+                            onclick="return confirm(\'Are you sure you want to delete this record?\')">
                             <i class="fas fa-trash"></i>
                         </button>
                     </form>
